@@ -2,9 +2,12 @@
 Web framework to create REST API 
 ## enable use of .htaccess in Apache on Ubuntu
 Open file as
-`sudo vim /etc/apache2/apache2.conf`
+```sudo vim /etc/apache2/apache2.conf
+```
 remove comment sign (#) if you find it before this line ( line number 187 approx.)
-`AccessFileName .htaccess`
+```AccessFileName .htaccess
+```
+
 Then find the line where there is
 ```
 <Directory /var/www/>
@@ -14,7 +17,8 @@ Then find the line where there is
 </Directory>
 ```
 replace "None" with "All"
-`'AllowOverride All'`
+```AllowOverride All
+```
 Activate ModRewrite
 ```
 sudo a2enmod rewrite
